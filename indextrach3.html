@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bridge Health Advisors</title>
+  <link rel="stylesheet" href="stylestrach.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+  <!--navigation-->
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Bridge Health Advisors</label>
+    <ul>
+        <li><a href='indexhome.html'>Home</a></li>
+        <li><a class="active" href='indexservices.html'>Services</a></li>
+        <li><a href='indexblog.html'>Blog</a></li>
+        <li><a href='indexabout.html'>About</a></li>
+    </ul>
+  </nav>
+  <!--content-->
+  <div class="nav2">
+  <ul>
+    <li><a href="indextrach.html">Introduction</a></li>
+    <li><a href="indextrach11.html">11s</a></li>
+    <li><a href="indextrach12.html">12s</a></li>
+    <li><a href="indextrach5.html">5s</a></li>
+    <li><a href="indextrach6.html">6s</a></li>
+    <li><a href="indextrach7.html">7s</a></li>
+    <li><a href="indextrach8.html">8s</a></li>
+    <li><a href="indextrach9.html">9s</a></li>
+    <li><a href="indextrach4.html">4s</a></li>
+    <li><a href="indextrach3.html" class='active2'>3s</a></li>
+    <li><a href="indextrachnext.html">More</a></li>
+  </ul>
+  </div>
+  <div class="explanation">
+    <div class="content-title">
+      <h2>The Rule of 3's</h2>
+    </div>
+    <div class="content-text">
+      <h3>1. For the first digit, subtract from 10 and double, add five if the digit is odd.<br>2. For middle digits, subtract from 9 and double, add 5 if the digit is odd, then add half the neighbor. <br>3. For the last digit, take half the left-hand digit of the long number and reduce by 2.</h3>
+      <p>Similar to the way that 8 and 9 have comparable operations, 3 and 4 also have comparable operations.  Lets work through one example together, then you can work on the practice problems below.  <br><br>764 x 3 will be our practice problem.  The first step is to remember to mentally put a zero before and after the number.  <blockquote>0 7 6 4 0</blockquote>  Starting with 4, we should mentally subtract 4 from 10 and get 6 then double it to get 12.  4 is not odd, so we will not have to add 5.  In our heads we think 6, 12, and then 2 is the first digit in our answer, remembering to put a dot over the 6.  <blockquote>2</blockquote> Then we move onto the next digit which is 6.  We subtract 6 from 9 and get 3, double 3 is 6, and add half its neighbor 4 wich is 2.  Mentally we should think 3 (9-6), 6 (double), 7 (added the one carried over) then 2(neighbor) and finally 9 which is the next number in our answer.  <blockquote>9 2</blockquote>  Then we move onto 7.  Mentally we should think 2 (9-7), then 4 (double), then 9 (adding 5 because 7 is odd), then 12 (added half the neighbor) then 2 which is the next digit in our answer.  <blockquote>2 9 2</blockquote> Now we are at the last digit in our number which is the 0 that we placed there mentally.  For this we take half its neighbor 7 and carry over the dot and subtract 2.  Mentally we should think 3 (half of 7), then 4 (carrying over the dot from 7), then 2 (subtracted 2).  <blockquote>764 x 3 = 2292</blockquote> Note that you add over the dot before subtracting two per the rule. This is important as on occasion this will equal 0, and there will be no last digit. <br>Now try the problems below.</p>
+    </div>
+  </div>
+  <div class="count-wrap">
+  <div class="count" id="count"></div>
+  </div>
+  <div class="content-wrap">
+    <div class="rule11">
+      <ul>
+    <!--Question 1-->
+    <li>
+      <div class="question">
+        <p class='questiontext' id='questiontext'></p>
+        <input type="text" name='answer' id='answer' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire()'>Enter</button>
+        <p class='message' id="message1"></p>
+        <script type="text/javascript">
+        var x=0;
+        document.getElementById('count').innerHTML=x + " correct out of 18"
+        function rtl(element)
+                {
+                    if(element.setSelectionRange){
+                        element.setSelectionRange(0,0);
+                    }
+                }
+              var minimum = 1;
+              var maximum = 1000000;
+              var int1 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+              var inta = 3;
+              document.getElementById('questiontext').innerHTML = int1 + "<br>" + "x" + " " + inta;
+              var qanswer1 = int1 * inta;
+
+                  function fire() {
+              var uanswer1 = document.getElementById('answer').value;
+                    if (uanswer1 == qanswer1) {
+                      document.getElementById('message1').innerHTML ="Correct";
+                      document.getElementById("message1").style.color = "green";
+                      document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                    } else {
+                      document.getElementById('message1').innerHTML ="Incorrect, try again.";
+                      document.getElementById("message1").style.color = "red";
+                    }
+                  }
+        </script>
+      </div>
+    </li>
+    <li>
+      <!--Question 2-->
+      <div class="question">
+        <p class='questiontext' id='questiontext2'></p>
+        <input type="text" name='answer2' id='answer2' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire2()'>Enter</button>
+        <p class='message' id="message2"></p>
+        <script type="text/javascript">
+        function rtl(element)
+                {
+                    if(element.setSelectionRange){
+                        element.setSelectionRange(0,0);
+                    }
+                }
+              var minimum = 1;
+              var maximum = 1000000;
+              var int2 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+              var inta = 3;
+              document.getElementById('questiontext2').innerHTML = int2 + "<br>" + "x" + " " + inta;
+              var qanswer2 = int2 * inta;
+
+                  function fire2() {
+              var uanswer2 = document.getElementById('answer2').value;
+                    if (uanswer2 == qanswer2) {
+                      document.getElementById('message2').innerHTML ="Correct";
+                      document.getElementById("message2").style.color = "green";
+                      document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                    } else {
+                      document.getElementById('message2').innerHTML ="Incorrect, try again.";
+                      document.getElementById("message2").style.color = "red";
+                    }
+                  }
+        </script>
+      </div>
+      </li>
+      <li>
+      <!--Question 3-->
+        <div class="question">
+          <p class='questiontext' id='questiontext3'></p>
+          <input type="text" name='answer3' id='answer3' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire3()'>Enter</button>
+          <p class='message' id="message3"></p>
+          <script type="text/javascript">
+          function rtl(element)
+                  {
+                      if(element.setSelectionRange){
+                          element.setSelectionRange(0,0);
+                      }
+                  }
+                var minimum = 1;
+                var maximum = 1000000;
+                var int3 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+                var inta = 3;
+                document.getElementById('questiontext3').innerHTML = int3 + "<br>" + "x" + " " + inta;
+                var qanswer3 = int3 * inta;
+
+                    function fire3() {
+                var uanswer3 = document.getElementById('answer3').value;
+                      if (uanswer3 == qanswer3) {
+                        document.getElementById('message3').innerHTML ="Correct";
+                        document.getElementById("message3").style.color = "green";
+                        document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                      } else {
+                        document.getElementById('message3').innerHTML ="Incorrect, try again.";
+                        document.getElementById("message3").style.color = "red";
+                      }
+                    }
+          </script>
+        </div>
+      </li>
+      <li>
+        <!--Question 4-->
+        <div class="question">
+          <p class='questiontext' id='questiontext4'></p>
+          <input type="text" name='answer4' id='answer4' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire4()'>Enter</button>
+          <p class='message' id="message4"></p>
+          <script type="text/javascript">
+          function rtl(element)
+                  {
+                      if(element.setSelectionRange){
+                          element.setSelectionRange(0,0);
+                      }
+                  }
+                var minimum = 1;
+                var maximum = 1000000;
+                var int4 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+                var inta = 3;
+                document.getElementById('questiontext4').innerHTML = int4 + "<br>" + "x" + " " + inta;
+                var qanswer4 = int4 * inta;
+
+                    function fire4() {
+                var uanswer4 = document.getElementById('answer4').value;
+                      if (uanswer4 == qanswer4) {
+                        document.getElementById('message4').innerHTML ="Correct";
+                        document.getElementById("message4").style.color = "green";
+                        document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                      } else {
+                        document.getElementById('message4').innerHTML ="Incorrect, try again.";
+                        document.getElementById("message4").style.color = "red";
+                      }
+                    }
+          </script>
+        </div>
+        </li>
+        <li>
+          <!--Question 5-->
+          <div class="question">
+            <p class='questiontext' id='questiontext5'></p>
+            <input type="text" name='answer5' id='answer5' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire5()'>Enter</button>
+            <p class='message' id="message5"></p>
+            <script type="text/javascript">
+            function rtl(element)
+                    {
+                        if(element.setSelectionRange){
+                            element.setSelectionRange(0,0);
+                        }
+                    }
+                  var minimum = 1;
+                  var maximum = 1000000;
+                  var int5 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+                  var inta = 3;
+                  document.getElementById('questiontext5').innerHTML = int5 + "<br>" + "x" + " " + inta;
+                  var qanswer5 = int5 * inta;
+
+                      function fire5() {
+                  var uanswer5 = document.getElementById('answer5').value;
+                        if (uanswer5 == qanswer5) {
+                          document.getElementById('message5').innerHTML ="Correct";
+                          document.getElementById("message5").style.color = "green";
+                          document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                        } else {
+                          document.getElementById('message5').innerHTML ="Incorrect, try again.";
+                          document.getElementById("message5").style.color = "red";
+                        }
+                      }
+            </script>
+          </div>
+          </li>
+          <li>
+            <!--Question 6-->
+            <div class="question">
+              <p class='questiontext' id='questiontext6'></p>
+              <input type="text" name='answer6' id='answer6' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire6()'>Enter</button>
+              <p class='message' id="message6"></p>
+              <script type="text/javascript">
+              function rtl(element)
+                      {
+                          if(element.setSelectionRange){
+                              element.setSelectionRange(0,0);
+                          }
+                      }
+                    var minimum = 1;
+                    var maximum = 1000000;
+                    var int6 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+                    var inta = 3;
+                    document.getElementById('questiontext6').innerHTML = int6 + "<br>" + "x" + " " + inta;
+                    var qanswer6 = int6 * inta;
+
+                        function fire6() {
+                    var uanswer6 = document.getElementById('answer6').value;
+                          if (uanswer6 == qanswer6) {
+                            document.getElementById('message6').innerHTML ="Correct";
+                            document.getElementById("message6").style.color = "green";
+                            document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                          } else {
+                            document.getElementById('message6').innerHTML ="Incorrect, try again.";
+                            document.getElementById("message6").style.color = "red";
+                          }
+                        }
+              </script>
+            </div>
+            </li>
+            <li>
+              <!--Question 7-->
+              <div class="question">
+                <p class='questiontext' id='questiontext7'></p>
+                <input type="text" name='answer7' id='answer7' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire7()'>Enter</button>
+                <p class='message' id="message7"></p>
+                <script type="text/javascript">
+                function rtl(element)
+                        {
+                            if(element.setSelectionRange){
+                                element.setSelectionRange(0,0);
+                            }
+                        }
+                      var minimum = 1;
+                      var maximum = 1000000;
+                      var int7 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+                      var inta = 3;
+                      document.getElementById('questiontext7').innerHTML = int7 + "<br>" + "x" + " " + inta;
+                      var qanswer7 = int7 * inta;
+
+                          function fire7() {
+                      var uanswer7 = document.getElementById('answer7').value;
+                            if (uanswer7 == qanswer7) {
+                              document.getElementById('message7').innerHTML ="Correct";
+                              document.getElementById("message7").style.color = "green";
+                              document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                            } else {
+                              document.getElementById('message7').innerHTML ="Incorrect, try again.";
+                              document.getElementById("message7").style.color = "red";
+                            }
+                          }
+                </script>
+              </div>
+              </li>
+              <li>
+                <!--Question 8-->
+                <div class="question">
+                  <p class='questiontext' id='questiontext8'></p>
+                  <input type="text" name='answer8' id='answer8' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire8()'>Enter</button>
+                  <p class='message' id="message8"></p>
+                  <script type="text/javascript">
+                  function rtl(element)
+                          {
+                              if(element.setSelectionRange){
+                                  element.setSelectionRange(0,0);
+                              }
+                          }
+                        var minimum = 1;
+                        var maximum = 1000000;
+                        var int8 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+                        var inta = 3;
+                        document.getElementById('questiontext8').innerHTML = int8 + "<br>" + "x" + " " + inta;
+                        var qanswer8 = int8 * inta;
+
+                            function fire8() {
+                        var uanswer8 = document.getElementById('answer8').value;
+                              if (uanswer8 == qanswer8) {
+                                document.getElementById('message8').innerHTML ="Correct";
+                                document.getElementById("message8").style.color = "green";
+                                document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                              } else {
+                                document.getElementById('message8').innerHTML ="Incorrect, try again.";
+                                document.getElementById("message8").style.color = "red";
+                              }
+                            }
+                  </script>
+                </div>
+                </li>
+                <li>
+                  <!--Question 9-->
+                  <div class="question">
+                    <p class='questiontext' id='questiontext9'></p>
+                    <input type="text" name='answer9' id='answer9' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire9()'>Enter</button>
+                    <p class='message' id="message9"></p>
+                    <script type="text/javascript">
+                    function rtl(element)
+                            {
+                                if(element.setSelectionRange){
+                                    element.setSelectionRange(0,0);
+                                }
+                            }
+                          var minimum = 1;
+                          var maximum = 1000000;
+                          var int9 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+                          var inta = 3;
+                          document.getElementById('questiontext9').innerHTML = int9 + "<br>" + "x" + " " + inta;
+                          var qanswer9 = int9 * inta;
+
+                              function fire9() {
+                          var uanswer9 = document.getElementById('answer9').value;
+                                if (uanswer9 == qanswer9) {
+                                  document.getElementById('message9').innerHTML ="Correct";
+                                  document.getElementById("message9").style.color = "green";
+                                  document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                                } else {
+                                  document.getElementById('message9').innerHTML ="Incorrect, try again.";
+                                  document.getElementById("message9").style.color = "red";
+                                }
+                              }
+                    </script>
+                  </div>
+              </li>
+              <li>
+                <!--Question 10-->
+                <div class="question">
+                  <p class='questiontext' id='questiontext10'></p>
+                  <input type="text" name='answer10' id='answer10' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire10()'>Enter</button>
+                  <p class='message' id="message10"></p>
+                  <script type="text/javascript">
+                  function rtl(element)
+                          {
+                              if(element.setSelectionRange){
+                                  element.setSelectionRange(0,0);
+                              }
+                          }
+                        var minimum = 1;
+                        var maximum = 1000000;
+                        var int10 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+                        var inta = 3;
+                        document.getElementById('questiontext10').innerHTML = int10 + "<br>" + "x" + " " + inta;
+                        var qanswer10 = int10 * inta;
+
+                            function fire10() {
+                        var uanswer10 = document.getElementById('answer10').value;
+                              if (uanswer10 == qanswer10) {
+                                document.getElementById('message10').innerHTML ="Correct";
+                                document.getElementById("message10").style.color = "green";
+                                document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                              } else {
+                                document.getElementById('message10').innerHTML ="Incorrect, try again.";
+                                document.getElementById("message10").style.color = "red";
+                              }
+                            }
+                  </script>
+                </div>
+            </li>
+            <li>
+              <!--Question 11-->
+              <div class="question">
+                <p class='questiontext' id='questiontext11'></p>
+                <input type="text" name='answer11' id='answer11' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire11()'>Enter</button>
+                <p class='message' id="message11"></p>
+                <script type="text/javascript">
+                function rtl(element)
+                        {
+                            if(element.setSelectionRange){
+                                element.setSelectionRange(0,0);
+                            }
+                        }
+                      var minimum = 1;
+                      var maximum = 1000000;
+                      var int11 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+                      var inta = 3;
+                      document.getElementById('questiontext11').innerHTML = int11 + "<br>" + "x" + " " + inta;
+                      var qanswer11 = int11 * inta;
+
+                          function fire11() {
+                      var uanswer11 = document.getElementById('answer11').value;
+                            if (uanswer11 == qanswer11) {
+                              document.getElementById('message11').innerHTML ="Correct";
+                              document.getElementById("message11").style.color = "green";
+                              document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                            } else {
+                              document.getElementById('message11').innerHTML ="Incorrect, try again.";
+                              document.getElementById("message11").style.color = "red";
+                            }
+                          }
+                </script>
+              </div>
+            </li>
+            <li>
+              <!--Question 12-->
+              <div class="question">
+                <p class='questiontext' id='questiontext12'></p>
+                <input type="text" name='answer12' id='answer12' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire12()'>Enter</button>
+                <p class='message' id="message12"></p>
+                <script type="text/javascript">
+                function rtl(element)
+                        {
+                            if(element.setSelectionRange){
+                                element.setSelectionRange(0,0);
+                            }
+                        }
+                      var minimum = 1;
+                      var maximum = 1000000;
+                      var int12 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+                      var inta = 3;
+                      document.getElementById('questiontext12').innerHTML = int12 + "<br>" + "x" + " " + inta;
+                      var qanswer12 = int12 * inta;
+
+                          function fire12() {
+                      var uanswer12 = document.getElementById('answer12').value;
+                            if (uanswer12 == qanswer12) {
+                              document.getElementById('message12').innerHTML ="Correct";
+                              document.getElementById("message12").style.color = "green";
+                              document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                            } else {
+                              document.getElementById('message12').innerHTML ="Incorrect, try again.";
+                              document.getElementById("message12").style.color = "red";
+                            }
+                          }
+                </script>
+              </div>
+            </li>
+            <li>
+              <!--Question 13-->
+              <div class="question">
+                <p class='questiontext' id='questiontext13'></p>
+                <input type="text" name='answer13' id='answer13' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire13()'>Enter</button>
+                <p class='message' id="message13"></p>
+                <script type="text/javascript">
+                function rtl(element)
+                        {
+                            if(element.setSelectionRange){
+                                element.setSelectionRange(0,0);
+                            }
+                        }
+                      var minimum = 1;
+                      var maximum = 1000000;
+                      var int13 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+                      var inta = 3;
+                      document.getElementById('questiontext13').innerHTML = int13 + "<br>" + "x" + " " + inta;
+                      var qanswer13 = int13 * inta;
+
+                          function fire13() {
+                      var uanswer13 = document.getElementById('answer13').value;
+                            if (uanswer13 == qanswer13) {
+                              document.getElementById('message13').innerHTML ="Correct";
+                              document.getElementById("message13").style.color = "green";
+                              document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                            } else {
+                              document.getElementById('message13').innerHTML ="Incorrect, try again.";
+                              document.getElementById("message13").style.color = "red";
+                            }
+                          }
+                </script>
+              </div>
+            </li>
+            <li>
+              <!--Question 14-->
+              <div class="question">
+                <p class='questiontext' id='questiontext14'></p>
+                <input type="text" name='answer14' id='answer14' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire14()'>Enter</button>
+                <p class='message' id="message14"></p>
+                <script type="text/javascript">
+                function rtl(element)
+                        {
+                            if(element.setSelectionRange){
+                                element.setSelectionRange(0,0);
+                            }
+                        }
+                      var minimum = 1;
+                      var maximum = 1000000;
+                      var int14 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+                      var inta = 3;
+                      document.getElementById('questiontext14').innerHTML = int14 + "<br>" + "x" + " " + inta;
+                      var qanswer14 = int14 * inta;
+
+                          function fire14() {
+                      var uanswer14 = document.getElementById('answer14').value;
+                            if (uanswer14 == qanswer14) {
+                              document.getElementById('message14').innerHTML ="Correct";
+                              document.getElementById("message14").style.color = "green";
+                              document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                            } else {
+                              document.getElementById('message14').innerHTML ="Incorrect, try again.";
+                              document.getElementById("message14").style.color = "red";
+                            }
+                          }
+                </script>
+              </div>
+          </li>
+          <li>
+            <!--Question 15-->
+            <div class="question">
+              <p class='questiontext' id='questiontext15'></p>
+              <input type="text" name='answer15' id='answer15' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire15()'>Enter</button>
+              <p class='message' id="message15"></p>
+              <script type="text/javascript">
+              function rtl(element)
+                      {
+                          if(element.setSelectionRange){
+                              element.setSelectionRange(0,0);
+                          }
+                      }
+                    var minimum = 1;
+                    var maximum = 1000000;
+                    var int15 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+                    var inta = 3;
+                    document.getElementById('questiontext15').innerHTML = int15 + "<br>" + "x" + " " + inta;
+                    var qanswer15 = int15 * inta;
+
+                        function fire15() {
+                    var uanswer15 = document.getElementById('answer15').value;
+                          if (uanswer15 == qanswer15) {
+                            document.getElementById('message15').innerHTML ="Correct";
+                            document.getElementById("message15").style.color = "green";
+                            document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                          } else {
+                            document.getElementById('message15').innerHTML ="Incorrect, try again.";
+                            document.getElementById("message15").style.color = "red";
+                          }
+                        }
+              </script>
+            </div>
+            </li>
+            <li>
+              <!--Question 16-->
+              <div class="question">
+                <p class='questiontext' id='questiontext16'></p>
+                <input type="text" name='answer16' id='answer16' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire16()'>Enter</button>
+                <p class='message' id="message16"></p>
+                <script type="text/javascript">
+                function rtl(element)
+                        {
+                            if(element.setSelectionRange){
+                                element.setSelectionRange(0,0);
+                            }
+                        }
+                      var minimum = 1;
+                      var maximum = 1000000;
+                      var int16 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+                      var inta = 3;
+                      document.getElementById('questiontext16').innerHTML = int16 + "<br>" + "x" + " " + inta;
+                      var qanswer16 = int16 * inta;
+
+                          function fire16() {
+                      var uanswer16 = document.getElementById('answer16').value;
+                            if (uanswer16 == qanswer16) {
+                              document.getElementById('message16').innerHTML ="Correct";
+                              document.getElementById("message16").style.color = "green";
+                              document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                            } else {
+                              document.getElementById('message16').innerHTML ="Incorrect, try again.";
+                              document.getElementById("message16").style.color = "red";
+                            }
+                          }
+                </script>
+              </div>
+          </li>
+          <li>
+            <!--Question 17-->
+            <div class="question">
+              <p class='questiontext' id='questiontext17'></p>
+              <input type="text" name='answer17' id='answer17' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire17()'>Enter</button>
+              <p class='message' id="message17"></p>
+              <script type="text/javascript">
+              function rtl(element)
+                      {
+                          if(element.setSelectionRange){
+                              element.setSelectionRange(0,0);
+                          }
+                      }
+                    var minimum = 1;
+                    var maximum = 1000000;
+                    var int17 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+                    var inta = 3;
+                    document.getElementById('questiontext17').innerHTML = int17 + "<br>" + "x" + " " + inta;
+                    var qanswer17 = int17 * inta;
+
+                        function fire17() {
+                    var uanswer17 = document.getElementById('answer17').value;
+                          if (uanswer17 == qanswer17) {
+                            document.getElementById('message17').innerHTML ="Correct";
+                            document.getElementById("message17").style.color = "green";
+                            document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                          } else {
+                            document.getElementById('message17').innerHTML ="Incorrect, try again.";
+                            document.getElementById("message17").style.color = "red";
+                          }
+                        }
+              </script>
+            </div>
+          </li>
+          <li>
+            <!--Question 18-->
+            <div class="question">
+              <p class='questiontext' id='questiontext18'></p>
+              <input type="text" name='answer18' id='answer18' dir='rtl' onkeyup="rtl(this);"><br><button onclick='fire18()'>Enter</button>
+              <p class='message' id="message18"></p>
+              <script type="text/javascript">
+              function rtl(element)
+                      {
+                          if(element.setSelectionRange){
+                              element.setSelectionRange(0,0);
+                          }
+                      }
+                    var minimum = 1;
+                    var maximum = 1000000;
+                    var int18 = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+                    var inta = 3;
+                    document.getElementById('questiontext18').innerHTML = int18 + "<br>" + "x" + " " + inta;
+                    var qanswer18 = int18 * inta;
+
+                        function fire18() {
+                    var uanswer18 = document.getElementById('answer18').value;
+                          if (uanswer18 == qanswer18) {
+                            document.getElementById('message18').innerHTML ="Correct";
+                            document.getElementById("message18").style.color = "green";
+                            document.getElementById('count').innerHTML= ++x + " correct out of 18";
+                          } else {
+                            document.getElementById('message18').innerHTML ="Incorrect, try again.";
+                            document.getElementById("message18").style.color = "red";
+                          }
+                        }
+              </script>
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div>
+
+
+  <!-- footer-->
+  <footer id='main-footer' class='grid'>
+      <div>Bridge Health Advisors</div>
+      <div>More about <a href='indexabout.html'>BHA</a></div>
+  </footer>
+</body>
+</html>

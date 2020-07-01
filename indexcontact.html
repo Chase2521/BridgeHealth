@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bridge Health Advisors</title>
+  <link rel="stylesheet" href="stylescontact.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+  <!--navigation-->
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Bridge Health Advisors</label>
+    <ul>
+        <li><a href='indexhome.html'>Home</a></li>
+        <li><a href='indexservices.html'>Services</a></li>
+        <li><a href='indexblog.html'>Blog</a></li>
+        <li><a href='indexabout.html'>About</a></li>
+    </ul>
+  </nav>
+  <!--content-->
+  <div class="content-wrap">
+    <div class="introduction">
+     <div class="content-title">
+       <h2>How Can We Help?</h2>
+     </div>
+     <div class="content-text">
+       <form id="contact-form" action="contact-handler.php">
+          <input name="name" type="text" class="form-control" placeholder="Your Name" required>
+          <br>
+          <input name="email" type="email" class="form-control" placeholder="Your Email" required><br>
+
+          <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
+
+          <input type="submit" class="btn" value="SEND MESSAGE" style="cursor: pointer;">
+
+       </form>
+     </div>
+     </div>
+  </div>
+
+
+  <!-- footer-->
+  <footer id='main-footer' class='grid'>
+      <div>Bridge Health Advisors</div>
+      <div>More about <a href='indexabout.html'>BHA</a></div>
+  </footer>
+</body>
+</html>
