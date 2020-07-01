@@ -30,7 +30,7 @@
        <h2>How Can We Help?</h2>
      </div>
      <div class="content-text">
-       <form id="contact-form" action="contact-handler.php" method="post">
+       <!--<form id="contact-form" action="contact-handler.php" method="post">
           <input name="name" type="text" class="form-control" placeholder="Your Name" required>
           <br>
           <input name="email" type="email" class="form-control" placeholder="Your Email" required><br>
@@ -39,7 +39,19 @@
 
           <input type="submit" class="btn" value="SEND MESSAGE" style="cursor: pointer;">
 
-       </form>
+       </form>-->
+       <form action="contact.php" method="post">
+  <div class="elem-group">
+    <input type="text" id="name" name="visitor_name" placeholder="Your Name" pattern=[A-Z\sa-z]{3,20} class="form-control" required>
+  </div>
+  <div class="elem-group">
+    <input type="email" id="email" name="visitor_email" placeholder="E-Mail" class="form-control" required>
+  </div>
+  <div class="elem-group">
+    <textarea id="message" name="visitor_message" placeholder="Message Here" class="form-control" required></textarea>
+  </div>
+  <button type="submit" class="btn">Send Message</button>
+</form>
      </div>
      </div>
   </div>
