@@ -167,6 +167,7 @@ img {
   columns: 2;
   text-align: center;
   margin: 10px 0 20px 0;
+  font-size: 12px;
 }
 .subjects ul {
   list-style: none;
@@ -177,7 +178,46 @@ img {
   margin: 30px 0 10px 0;
   padding-bottom: 40px;
 }
+/*file dropdown*/
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
 
+.active1, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active1:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+.dropdown {
+  margin-bottom: 10px;
+}
 
 
 
@@ -221,7 +261,11 @@ img {
   .subjects .content-text {
     columns: 4;
   }
-
+  .collapsible {
+    width: 30%;}
+  .content {
+    width: 40%;
+  }
 
   /*footer*/
   #main-footer {

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bridge Health Advisors</title>
+  <link rel="stylesheet" href="stylestutoring.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+  <!--navigation-->
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Bridge Health Advisors</label>
+    <ul>
+        <li><a href='indexhome.html'>Home</a></li>
+        <li><a class="active" href='indexservices.html'>Services</a></li>
+        <li><a href='indexblog.html'>Blog</a></li>
+        <li><a href='indexabout.html'>About</a></li>
+    </ul>
+  </nav>
+  <!--content-->
+  <div class="content-wrap">
+    <div class="introduction">
+     <div class="content-title">
+       <h2>IELTS & Other English Courses</h2>
+       <h3>Learn online with free or low cost English courses.</h3>
+     </div>
+     <div class="content-text">
+       <img src="img/learnenglish.jpg" alt="a man facing a blackboard with a class schedule written on it">
+       <p>We are currently running a 10 week IELTS Reading course. The course is free and the students are connected via WeChat.  Please contact us for access to the course.  <br><br>Course files as well as videos can be accessed below. Advanced course links will be sent out individually.</p>
+     </div>
+     </div>
+     <div class="classtype">
+       <div class="content-title">
+         <h3>Current Course</h3>
+       </div>
+       <div class="content-text">
+         <p><h4>IELTS READING (雅思阅读)</h4> <br> Start (开): February 27, 2021 Through End (到): May 1, 2021</p>
+       </div>
+       <div class="content-title">
+         <h3>Next Course</h3>
+       </div>
+       <div class="content-text">
+         <p><h4>IELTS WRITING or ENGLISH WRITING STARTER</h4> <br>Dates: TBD</p>
+       </div>
+     </div>
+     <div class="subjects">
+       <div class="content-title">
+         <h3>Regular Courses</h3>
+       </div>
+       <div class="content-text">
+       <ul>
+         <li><strong>IELTS</strong></li>
+         <li>Conversation</li>
+         <li>Reading</li>
+         <li>Writing</li>
+         <li>Test Skills</li>
+         <li>Academic Course</li>
+         <li><strong>Other English</strong></li>
+         <li>Creative Writing</li>
+         <li>Writing a Better Brain</li>
+         <li>Business Conversation</li>
+         <li>English Writing Starter</li>
+         <li>Dramatic Reading</li>
+       </ul>
+       </div>
+     </div>
+
+
+      <div class="contact">
+      <a href='indexcontact.html' class='btn'>Contact Us</a>
+      </div>
+    <div class="dropdown">
+      <h3>Course Files</h3>
+
+<p>IELTS READING Feb 2021:</p>
+<button class="collapsible">All Files</button>
+<div class="content">
+  <ol>
+    <li><a href="https://youtu.be/oSDmjFo2S4M" target='_blank'>Course Advertisement (YouTube)（预告-国外）</a></li>
+    <li><a href="#" target='_blank'>Course Advertisement (Coming soon)（预告-国内）</a></li>
+    <li><a href="files/IELTS Reading 1.pdf" target='_blank'>Reading Lesson 1（第一堂课）</a></li>
+  </ol>
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active1");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+    </div>
+    <!--couldn't figure out how to add a margin to the script above-->
+    <div>
+      <p> </p>
+    </div>
+  </div>
+
+
+  <!-- footer-->
+  <footer id='main-footer' class='grid'>
+      <div>Bridge Health Advisors</div>
+      <div>More about <a href='indexabout.html'>BHA</a></div>
+  </footer>
+</body>
+</html>
