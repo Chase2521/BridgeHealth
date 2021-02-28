@@ -258,10 +258,11 @@ img {
     grid-template-columns: 1fr 1fr;
     text-align: center;
   }
-  .classtype:nth-child(1) {order: 1;}
-  .classtype:nth-child(2){order:3;}
-  .classtype:nth-child(3){order:2;}
-  .classtype:nth-child(4) {order:4;}
+  #c1 {order:1;}
+  #c2 {order:3;}
+  #c3 {order:2;}
+  #c4 {order:4;}
+
 
   .subjects .content-text {
     columns: 4;
